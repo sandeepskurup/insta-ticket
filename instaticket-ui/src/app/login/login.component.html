@@ -1,34 +1,42 @@
 <div class="container-fluid">
-    <div class="loginImg">
-            <div style="margin: 0px 95px;height: 85%;padding-top: 8em;">
-                    <div class="icon" style="text-align:center;"></div>
-                    <h1 class="title" style="text-align:center;"> INSTATICKET</h1>
-                    <h5 class="sub" style="text-align:center;">ADD, CHANGE AND CORRECT</h5>
-                </div>
+    <div class="ipad" [ngStyle]="{'height.px':.65*height}">
+        <div class="leftDiv">
+            <div class="icon" style="text-align:center;"></div>
+            <h1 class="title" style="text-align:center;"> INSTATICKET</h1>
+            <h5 class="sub" style="text-align:center;">ADD, CHANGE AND CORRECT</h5>
+        </div>
     </div>
-    
-    <div class="login"> 
-            <div class="circle">
+    <div class="loginImg" [ngStyle]="{'height.px':height}">
+        <div style="margin: 0px 95px;height: 85%;padding-top: 8em;">
+            <div class="icon" style="text-align:center;"></div>
+            <h1 class="title" style="text-align:center;"> INSTATICKET</h1>
+            <h5 class="sub" style="text-align:center;">ADD, CHANGE AND CORRECT</h5>
+        </div>
+    </div>
 
+    <div class="login">
+        <div class="circle">
+
+        </div>
+        <form>
+            <div class="form-group">
+                <div>
+                    <h3 style="font-family: 'Montserrat', sans-serif;">Lets' start</h3>
                 </div>
-            <form>
-                    <div class="form-group">
-                        <div>
-                            <h3 style="font-family: 'Montserrat', sans-serif;">Lets' start</h3>
-                        </div>
-                        <input type="email" class="form-control" placeholder="USERNAME">
-                    </div>
-                    <div class="form-group">
-    
-                        <input type="password" class="form-control" placeholder="PASSWORD">
-                    </div>
-    
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <div class="form-group">
-    
-                        <span class="text-primary"> New User? <a routerLink="/register">Register</a> </span>
-    
-                    </div>
-                </form>
+                <input type="email" class="form-control" placeholder="USERNAME">
+            </div>
+            <div class="form-group">
+
+                <input type="password" class="form-control" placeholder="PASSWORD">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="form-group">
+
+                <span class="text-primary"> New User? <a routerLink="/register">Register</a> </span>
+
+            </div>
+        </form>
     </div>
+
 </div>

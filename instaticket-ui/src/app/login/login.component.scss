@@ -1,73 +1,95 @@
+.container-fluid {
+  display: flex;
 
-
-
-
-.container-fluid{
-  display:flex;
-  height: 625px;
-  
   padding-left: 0;
-  
 }
-
-.login{
-  
-  padding-left:4em;
-  width:32%;
+.ipad {
+  display: none;
+}
+.login {
+  padding-left: 4em;
+  width: 32%;
   height: 100%;
-   padding-top: 7em;
- 
-  align-items: center;
+  padding-top: 7em;
 
+  align-items: center;
 }
 
 .loginImg {
- 
-  // background-size: 1174px auto;
-  //  background-image: url("../../image/Penguins.jpg");
   background-image: url("../../image/background.svg");
-  background-size:cover;
- width:54%;
- display: flex;
- align-items: center;
+  background-size: cover;
+  width: 54%;
+  display: flex;
+  align-items: center;
+}
+.circle {
+  background-size: contain;
+  background-image: url("../../image/circles.svg");
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 25%;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 10em;
+
+  // left: 250px;
+  // top: 30px;
+}
+.title {
+  font-size: 60px;
+
+  color: white;
+  font-family: Montserrat;
+  font-weight: bolder;
+}
+.sub {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+}
+.icon {
+  background-image: url("../../image/icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin: 0px auto;
+
+  height: 28%;
+  width: 32%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .loginImg {
+    display: none;
   }
   .circle {
-    background-size: contain;
-    background-image: url("../../image/circles.svg");
-    background-repeat: no-repeat;
-    width: 35%;
-    height: 25%;
-    margin-left:auto;
-    margin-right: 0;
-    
-    
-    // left: 250px;
-    // top: 30px;
+    display: none;
   }
-  .title {
-   
-    font-size: 60px;
-   
-    
-    color: white;
-    font-family: Montserrat;
-    font-weight: bolder;
+  .container-fluid {
+    display: inline-block;
+    padding: 0 0 0 0;
   }
-  .sub {
-    
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: bold;
+  .ipad {
+    background-image: url("../../image/background_mob.svg");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-size: cover;
+  }
+  .login {
+    margin: 0 auto;
+    padding-top: 0em;
+    width: 65%;
+    padding-left: 0em;
   }
   .icon {
-    background-image: url("../../image/icon.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  
-  
-    margin: 0px auto;
-    
-    height: 28%;
-    width: 32%;
-  
+    width: 14%;
+    height: 100%;
   }
+  .leftDiv {
+    padding-top: 8em;
+  }
+  .login h3 {
+    font-size: 39px;
+  }
+}

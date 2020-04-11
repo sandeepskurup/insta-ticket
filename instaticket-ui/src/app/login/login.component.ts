@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  height: any = 500;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.height = window.innerHeight;
+  }
   constructor() { }
 
   ngOnInit() {
+    this.height = window.innerHeight;
   }
 
 }
