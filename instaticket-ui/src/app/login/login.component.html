@@ -18,16 +18,40 @@
         <div class="circle">
 
         </div>
-        <form>
-            <div class="form-group">
-                <div>
-                    <h3 style="font-family: 'Montserrat', sans-serif;">Lets' start</h3>
-                </div>
-                <input type="email" class="form-control" placeholder="USERNAME">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <!-- <div class="form-group"> -->
+            <div>
+                <h3 style="font-family: 'Montserrat', sans-serif;">Lets' start</h3>
             </div>
-            <div class="form-group">
+            <div class="form-row">
+                <p class="mb-0 w-100">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Username</mat-label>
+                        <input type="text" formControlName='username' matInput placeholder="Username">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <mat-error *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">
+                            Username is mandatory</mat-error>
+                    </mat-form-field>
+                </p>
+                <!-- <span *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">
+                    Enter valid username
+                </span> -->
+                <p class="mt-n1 mb-0 w-100">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName='password' type="password">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <mat-error *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+                            Password is mandatory</mat-error>
+                    </mat-form-field>
+                </p>
+                <!-- 
+                <span *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+                    Enter valid Password
+                </span> -->
+            </div>
+            <div class="form-row">
 
-                <input type="password" class="form-control" placeholder="PASSWORD">
             </div>
 
             <button type="submit" class="btn btn-primary">Login</button>
@@ -36,6 +60,8 @@
                 <span class="text-primary"> New User? <a routerLink="/register">Register</a> </span>
 
             </div>
+
+
         </form>
     </div>
 

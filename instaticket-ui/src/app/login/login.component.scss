@@ -57,6 +57,9 @@
   height: 28%;
   width: 32%;
 }
+input .ng-invalid .ng-touched {
+  border: 1px solid red;
+}
 
 @media only screen and (max-width: 1024px) {
   .loginImg {
